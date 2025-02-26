@@ -1,0 +1,315 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #FFD700; /* Gold color */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #000;
+    color: #FFD700;
+    font-weight: bold;
+    padding: 5px 0; /* Very small padding */
+    border-bottom: 2px solid #FFD700;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem; /* Very small font size for the title */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Align items vertically */
+}
+
+nav ul li {
+    margin-left: 10px; /* Very small spacing between nav items */
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem; 
+    padding: 3px 8px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:url('mani1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #FFD700;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 0;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #FFD700;
+    display: inline-block;
+}
+
+.section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+/* Education Section */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.education-item {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border: 1px solid #FFD700;
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+}
+
+.education-item h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #FFD700;
+}
+
+.education-item p {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border: 1px solid #FFD700;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.skill h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.skill p {
+    font-size: 1rem;
+}
+
+/* Project Grid Styles */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border: 1px solid #FFD700;
+    border-radius: 8px;
+}
+
+.project h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.project p {
+    font-size: 1rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000;
+    color: #FFD700;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #FFD700;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .skills-grid, .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hero-section {
+        background-size: cover; /* Adjusted size for mobile */
+        background-position: Right -150px center; 
+        background-repeat: no-repeat;  
+ }
+  }
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+.section:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.section:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.section:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.section:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.section:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.section:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+/* Hero Section Animation */
+.hero-section h1 {
+    animation: slideInFromLeft 1s ease forwards;
+}
+
+.hero-section p {
+    animation: slideInFromRight 1s ease forwards;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@media only screen and (max-width: 767px) {
+    .hero-section {
+        background-size: cover; /* Adjusted size for mobile */
+        background-position: Right -150px center; 
+        background-repeat: no-repeat;  
+ }
+  }
