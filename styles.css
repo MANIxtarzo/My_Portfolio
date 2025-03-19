@@ -89,6 +89,21 @@ nav ul li a:hover {
     color: #ffffff;
     font-weight: bold;
 }
+.hero-section a {
+    background: #FFD700;
+    color: #000;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+  
+.hero-section a:hover {
+    color: #fff;
+    font-size: 10px;
+    background-color: #000;
+  }
 
 /* Section Styles */
 .section {
